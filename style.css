@@ -1,33 +1,48 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(32, 30, 30, 0.52), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
 * {
   box-sizing: border-box;
 }
 
-body {
+#root {
   background-color: #f7f7f7;
+  color: #000;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
   min-height: 100vh;
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
 .container {
-  margin: 30px auto;
-  width: 350px;
+  margin: 10px auto;
+  width: 400px
 }
 
-h1 {
+.titulo-principal{
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: 700;
+  font-stretch: 67%;
+  color: darkblue;
+  transform: skewX(45deg);
+  transform: skewY(2deg);
+  transform: scale(1, 1.7);
+}
+
+.valorSaldo {
   letter-spacing: 1px;
   margin: 0;
-  color: #2e75cc;
+  padding: 11px;
+  color: #22d1e0;
+  font-weight: 900;
 }
 
 h3 {
@@ -90,15 +105,19 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #0c09c8;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
-  display: block;
+  /* display: block; */
   font-size: 16px;
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+  
+}
+.form-control small{
+  transform: scale(4, 3);
 }
 
 .btn:focus,
@@ -149,4 +168,71 @@ input[type='number'] {
 
 .transactions li:hover .delete-btn {
   opacity: 1;
+}
+
+
+.flex{
+  display: flex;
+}
+.column{
+  flex-direction: column;
+}
+
+@media only screen and (min-width:550px) and (max-width:620px) {
+  .container {
+    margin: 10px auto;
+    width: 75%;
+    transition: width 2s;
+  }
+
+}
+@media only screen and (min-width:621px) and (max-width:699px) {
+  .container {
+    margin: 10px auto;
+    width: 67%;
+    transition: width 2s;
+  }
+
+}
+
+@media only screen and (min-width:700px) {
+  body {
+      background-color: #f81;
+  }
+  .root{
+    background-color: #f0f;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+  }
+
+  .container {
+    margin: 10px auto;
+    width: 63%;
+    transition: width 2s;
+  }
+
+}
+
+@media only screen and (min-width:701px) and (max-width:799px) {
+  .container {
+    margin: 10px auto;
+    width: 50%;
+    transition: width 2s;
+  }
+
+}
+@media only screen and (min-width:900px) and (max-width:1400px) {
+  .container {
+    margin: 10px auto;
+    width: 40%;
+    transition: width 2s;
+  }
+
 }
