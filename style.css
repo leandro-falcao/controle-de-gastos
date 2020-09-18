@@ -1,44 +1,63 @@
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 :root {
-  --box-shadow: 0 1px 3px rgba(32, 30, 30, 0.52), 0 1px 2px rgba(0, 0, 0, 0.24);
+  --box-shadow: 0 1px 3px rgba(119, 15, 15, 0.905), 0 1px 2px rgba(171, 226, 17, 0.967);
 }
 
 * {
   box-sizing: border-box;
 }
 
+html, body{
+  /* max-width: 100vh; */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  margin-left: 0.1%;
+  margin-right: 0.1%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  overflow-x: hidden;
+}
 #root {
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: #85808036;
   color: #000;
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  min-height: 100vh;
+  height: auto;
+  width: 100vw;
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
 
 .container {
-  margin: 10px auto;
-  width: 400px
+  width: 91%
 }
 
 .titulo-principal{
-  color: #333;
-  letter-spacing: 1px;
+  display: flex;
+
+  color: rgb(7, 4, 4);
+  letter-spacing: 2px;
   font-weight: 700;
   font-stretch: 67%;
-  color: darkblue;
+  color: #01017c;
+  
   transform: skewX(45deg);
   transform: skewY(2deg);
   transform: scale(1, 1.7);
+
+  padding-top: 1%;
+  padding-bottom: 2%
 }
 
 .valorSaldo {
-  letter-spacing: 1px;
+  letter-spacing: 4px;
   margin: 0;
   padding: 11px;
   color: #22d1e0;
@@ -59,10 +78,10 @@ h4 {
 .inc-exp-container {
   background-color: #fff;
   box-shadow: var(--box-shadow);
-  padding: 20px;
+  padding: 6%;
   display: flex;
   justify-content: space-between;
-  margin: 20px 0;
+  /* margin: 20px 0; */
 }
 
 .inc-exp-container > div {
@@ -103,9 +122,16 @@ input[type='number'] {
   width: 100%;
 }
 
+.pai-btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .btn {
   cursor: pointer;
-  background-color: #0c09c8;
+  /* background-color: #2b2bc0; */
+  background-color: #045dbd;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -113,8 +139,10 @@ input[type='number'] {
   font-size: 16px;
   margin: 10px 0 30px;
   padding: 10px;
-  width: 100%;
   
+  width: 50%;
+  letter-spacing: 0.23em;
+
 }
 .form-control small{
   transform: scale(4, 3);
@@ -152,22 +180,23 @@ input[type='number'] {
 
 .delete-btn {
   cursor: pointer;
-  background-color: #e74c3c;
+  background-color: #e49b13;
   border: 0;
   color: #fff;
   font-size: 20px;
-  line-height: 20px;
-  padding: 2px 5px;
+  line-height: 120%;
+  padding: 5px 8px;
   position: absolute;
   top: 50%;
   left: 0;
   transform: translate(-100%, -50%);
-  opacity: 0;
+  opacity: 0.21;
   transition: opacity 0.3s ease;
 }
 
 .transactions li:hover .delete-btn {
-  opacity: 1;
+  opacity: 0.91;
+  background-color: #940c2a;
 }
 
 
@@ -178,61 +207,71 @@ input[type='number'] {
   flex-direction: column;
 }
 
-@media only screen and (min-width:550px) and (max-width:620px) {
-  .container {
-    margin: 10px auto;
-    width: 75%;
-    transition: width 2s;
-  }
-
-}
-@media only screen and (min-width:621px) and (max-width:699px) {
-  .container {
-    margin: 10px auto;
-    width: 67%;
-    transition: width 2s;
-  }
-
+.cifrao{
+  font-size: 130%;
+  color: #0e8792;
+  letter-spacing: 1px;
+  
 }
 
-@media only screen and (min-width:700px) {
-  body {
-      background-color: #f81;
+@media only screen and (min-width:500px) and (max-width:619px) {
+   .container {
+    width: 80%;
+    transition: width 2s ease;
   }
-  .root{
-    background-color: #f0f;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 100vh;
-    margin: 0;
-    font-family: 'Lato', sans-serif;
-  }
-
+}
+@media only screen and (min-width:620px) and (max-width:769px){
   .container {
-    margin: 10px auto;
-    width: 63%;
-    transition: width 2s;
+    width: 70%;
+    transition: width 2s ease;
   }
-
 }
 
-@media only screen and (min-width:701px) and (max-width:799px) {
+@media only screen and (min-width:770px) and (max-width:859px){
   .container {
-    margin: 10px auto;
-    width: 50%;
-    transition: width 2s;
+    width: 62%;
+    transition: width 2s ease;
   }
-
 }
-@media only screen and (min-width:900px) and (max-width:1400px) {
-  .container {
-    margin: 10px auto;
-    width: 40%;
-    transition: width 2s;
-  }
 
+@media only screen and (min-width:860px) and (max-width:999px){
+  .container {
+    width: 55%;
+    transition: width 2s ease;
+  }
+}
+
+@media only screen and (min-width:1000px) and (max-width:1999px){
+  .container {
+    width: 48%;
+    transition: width 2s ease;
+  }
+}
+
+@media only screen and (min-width:2000px) and (max-width:3999px){
+  .container {
+    width: 42%;
+    transition: width 2s ease;
+  }
+}
+
+
+@media only screen and (min-width:100px) and (max-width:299px) {
+  .container {
+   width: 100%;
+   transition: width 2s ease;
+   
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+ }
+ .inc-exp-container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+ .form-control > input {
+   display: flex;
+   max-width: 200px ;
+ }
 }
